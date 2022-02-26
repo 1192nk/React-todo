@@ -1,7 +1,8 @@
 import "./styles.css";
 import { useState } from "react";
 import { InputTodo } from "./components/InputTodo";
-import { IncompleteTodos, incompleteTodos } from "./components/IncompleteTodos";
+import { IncompleteTodos } from "./components/IncompleteTodos";
+import { CompleteTodos } from "./components/CompleteTodos";
 
 export const App = () => {
   const [todoText, setTodoText] = useState("");
@@ -62,6 +63,12 @@ export const App = () => {
         todos={incompleteTodos}
         onClickComplete={onClickComplete}
         onClickDelete={onClickDelete}
+      />
+
+      <CompleteTodos
+        todos={completeTodos}
+        onClickBack={onClickBack}
+        onClickDelete={onClickDelete2}
       />
     </>
   );
